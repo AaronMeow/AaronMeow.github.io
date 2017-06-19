@@ -3,25 +3,78 @@
   
     
     <entry>
-      <title><![CDATA[Test Math]]></title>
-      <url>/math/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      <title><![CDATA[abstract class和interface]]></title>
+      <url>/java/abstract%20class%E5%92%8Cinterface/</url>
+      <content type="html"><![CDATA[<p>大致的来说，interface也许算是abstract class的变体，都不可以实例化。只不过有些地方有区别，比如子类：interface是实现（还可以多个），abstract class是继承（单个）。</p>
+<p>比较</p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>abstract class</th>
+<th>interface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成员变量</td>
+<td>可以拥有自己的成员变量</td>
+<td>如果要有必须为 static final</td>
+<td></td>
+</tr>
+<tr>
+<td>方法类型</td>
+<td>private、不是abstract</td>
+<td>public abstract</td>
+<td></td>
+</tr>
+<tr>
+<td>实例化</td>
+<td>不可以实例化，且子类都必须实现已声明的抽象方法</td>
+<td>同</td>
+<td></td>
+</tr>
+<tr>
+<td>子类数量</td>
+<td>一个类只能继承一个abstract class</td>
+<td>一个类实现多个interface</td>
+<td></td>
+</tr>
+<tr>
+<td>子类的方法</td>
+<td>可以选择性的实现哪些方法</td>
+<td>某个方法必须实现</td>
+<td></td>
+</tr>
+<tr>
+<td>与子类的联系</td>
+<td>abstract class中可以有非抽象的方法，子类中是必须实现有abstract的方法。非abstract方法可以选择继承或者重写覆盖。</td>
+<td>interface中的方法都是抽象的，而且默认的都是public，且不能声明private和protected。</td>
+<td></td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>重要的就是需要一个统一的接口并且需要声明一个变量的情况，不希望也不需要子类实现所有的方法，只需要子类实现某些特定的方法。并且可以有共用的方法，也可以考虑abstract class。</td>
+<td>不在乎他的子类是如何实现的，只需要保证接口一致的协调性。需要多种类型的方法，但是又是分开写的互不干扰，可以选择interface的形式。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>注：interface 可以拿来定义一些常量，而不使用static class来定义。</strong></p>
 ]]></content>
       
         <categories>
             
-            <category> math </category>
+            <category> java </category>
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> interface </tag>
+            
+        </tags>
         
     </entry>
     

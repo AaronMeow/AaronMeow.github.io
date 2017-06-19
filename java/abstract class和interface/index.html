@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><title>abstract class和interface - Meow's Blog</title><meta name="description" content="大致的来说，interface也许算是abstract class的变体，都不可以实例化。只不过有些地方有区别，比如子类：interface是实现（还可以多个），abstract class是继承（单个）。比较内容abstract classinterface成员变量可以拥有自己的成员变量如果要有必"><link type="text/css" rel="stylesheet" href="/css/basic.css?v=0.0.0"><link type="text/css" rel="stylesheet" href="/css/pure.css?v=0.0.0"><link type="text/css" rel="stylesheet" href="/css/style.css?v=0.0.0"><script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script></head></html><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">abstract class和interface</h1><a id="logo" href="/.">Meow's Blog</a></div><div id="nav-menu"><div class="bitcron_nav"><div class="site_nav_wrap"><div class="site_nav"><span class="a_container"><a href="/." class="selected active current">首页</a></span><span class="a_container"><a href="/archives/">归档</a></span><span class="a_container"><a href="/about/">关于</a></span></div></div></div></div><script type="text/javascript" color="255,102,102" opacity="0.7" zIndex="-2" count="140" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">abstract class和interface</h1><div class="post-meta">Apr 13, 2014<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" type="text/javascript"></script><span class="meta-space">  |  </span><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span><span> 浏览</span></span></div><div class="post-content"><p>大致的来说，interface也许算是abstract class的变体，都不可以实例化。只不过有些地方有区别，比如子类：interface是实现（还可以多个），abstract class是继承（单个）。</p>
+<p>比较</p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>abstract class</th>
+<th>interface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成员变量</td>
+<td>可以拥有自己的成员变量</td>
+<td>如果要有必须为 static final</td>
+<td></td>
+</tr>
+<tr>
+<td>方法类型</td>
+<td>private、不是abstract</td>
+<td>public abstract</td>
+<td></td>
+</tr>
+<tr>
+<td>实例化</td>
+<td>不可以实例化，且子类都必须实现已声明的抽象方法</td>
+<td>同</td>
+<td></td>
+</tr>
+<tr>
+<td>子类数量</td>
+<td>一个类只能继承一个abstract class</td>
+<td>一个类实现多个interface</td>
+<td></td>
+</tr>
+<tr>
+<td>子类的方法</td>
+<td>可以选择性的实现哪些方法</td>
+<td>某个方法必须实现</td>
+<td></td>
+</tr>
+<tr>
+<td>与子类的联系</td>
+<td>abstract class中可以有非抽象的方法，子类中是必须实现有abstract的方法。非abstract方法可以选择继承或者重写覆盖。</td>
+<td>interface中的方法都是抽象的，而且默认的都是public，且不能声明private和protected。</td>
+<td></td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>重要的就是需要一个统一的接口并且需要声明一个变量的情况，不希望也不需要子类实现所有的方法，只需要子类实现某些特定的方法。并且可以有共用的方法，也可以考虑abstract class。</td>
+<td>不在乎他的子类是如何实现的，只需要保证接口一致的协调性。需要多种类型的方法，但是又是分开写的互不干扰，可以选择interface的形式。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>注：interface 可以拿来定义一些常量，而不使用static class来定义。</strong></p>
+</div><div class="tags"><a href="/tags/interface/">interface</a></div><div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div><script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script><script>var cloudTieConfig = {
+    url: document.location.href,
+    sourceId: "",
+    productKey: "b22222801b0e4cddb0539a007b962462",
+    //因为我前面改了主题配置结构，所以上面就一级一级定位productKey了，根据自己的规则写
+    target: "cloud-tie-wrapper"
+};</script></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" id="search" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://yuanwei.me"/></form></div><div class="widget"><div class="widget-title"> 分类</div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"> 标签</div><div class="tagcloud"><a href="/tags/interface/" style="font-size: 12px;">interface</a></div></div><div class="widget"><div class="widget-title"> 最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/java/abstract class和interface/">abstract class和interface</a></li></ul></div><div class="widget"><div class="widget-title"> 友情链接</div><ul class="links-list"><li class="links-list-item"><a href="http://www.wuwenbin.me" title="彬哥" target="_blank">彬哥</a></li></ul></div></div></div></div><div id="footer">© <a href="/." rel="nofollow">Meow's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a> Theme<a target="_blank" href="https://github.com/7ye/maupassant-hexo"> Maupassant.</a></div><a id="back_to_top" href="javascript:void(0)" class="back_to_top"><span>△</span></a><script type="text/javascript" src="/js/totop.js?v=0.0.0"></script><link rel="stylesheet" href="/css/jquery.fancybox.css"><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><script>function auto_code_fit(){
+  if($(".highlight").length != 0){
+    var pc_width = $(".post-content").width();
+    $(".highlight .code").find("pre").width((pc_width-70)+"px");
+  }
+}
+window.onresize = function(){
+  auto_code_fit();
+}
+auto_code_fit();</script></div></body>
